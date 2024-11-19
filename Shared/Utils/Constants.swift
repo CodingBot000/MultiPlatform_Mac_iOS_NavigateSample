@@ -10,5 +10,4 @@ import Foundation
 
 enum Dimens {
     static let fontSize: CGFloat = 50
-    
 }

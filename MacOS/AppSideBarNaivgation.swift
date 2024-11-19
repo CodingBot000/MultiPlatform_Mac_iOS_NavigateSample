@@ -72,7 +72,7 @@ struct AppSidebarNavigation: View {
                         
                         switch viewIdentifier {
                         case .view1_1:
-                            View1_1(path :$pathView1)
+                            View1_1(path: $pathView1)
                         case .view1_2:
                             View1_2(path: $pathView1)
                         }

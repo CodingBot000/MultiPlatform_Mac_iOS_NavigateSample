@@ -45,7 +45,7 @@ struct View1_1: View {
             viewModel.getIdentifierString(identifier: curPath)
             withAnimation(.easeInOut) {}
         }
-        .padding()
+       
     }
 
 }

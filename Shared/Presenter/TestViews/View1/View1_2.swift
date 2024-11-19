@@ -22,6 +22,10 @@ struct View1_2: View {
                 .foregroundStyle(.tint)
             if let pathInfo = viewModel.pathInfo {
                 TestNameView(pathName: pathInfo.name)
+                
+                Button("Fake Button For Matching Text pos") {
+                 
+                }.hidden()
             } else {
                 Text("Loading...")
                     .font(.system(size: Dimens.fontSize))

@@ -22,6 +22,10 @@ struct View2_2: View {
                 .foregroundStyle(.tint)
             if let pathInfo = viewModel.pathInfo {
                 TestNameView(pathName: pathInfo.name)
+                
+                Button("Matching Text pos") {
+                 
+                }.hidden()
             } else {
                 Text("Loading...")
                     .font(.system(size: Dimens.fontSize))
@@ -34,13 +38,13 @@ struct View2_2: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .multilineTextAlignment(.center)
-        .background(Color.gray.ignoresSafeArea())
+        .background(Color.cyan.ignoresSafeArea())
         .navigationTitle(viewModel.pathInfo?.name ?? "Loading...")
         .onAppear {
             viewModel.getIdentifierString(identifier: curPath)
             // back animation
             withAnimation(.easeInOut) {}
         }
-        .padding()
+
     }
 }

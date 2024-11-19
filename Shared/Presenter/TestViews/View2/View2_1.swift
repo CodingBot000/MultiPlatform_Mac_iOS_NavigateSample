@@ -5,7 +5,6 @@
 //  Created by switchMac on 11/18/24.
 //
 import SwiftUI
-import SwiftUICore
 
 struct View2_1: View {
     @Binding var path: NavigationPath
@@ -40,7 +39,7 @@ struct View2_1: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .multilineTextAlignment(.center)
         .background(Color.gray.ignoresSafeArea())
-        .padding()
+
         .navigationTitle(viewModel.pathInfo?.name ?? "Loading...")
         .onAppear {
             viewModel.getIdentifierString(identifier: curPath)
