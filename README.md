@@ -13,16 +13,17 @@
 <li>The project leverages NavigationPath to manage navigation history. On macOS, where native menu-specific stack history preservation is not provided, custom logic has been implemented to retain the last stack state for each menu. This means users can switch between menus and return to the previously navigated state for each menu independently.</li>
 </ul>
 
-- MacOS 
+
+- MacOS  
 [![Video Label](http://img.youtube.com/vi/YsAy3gaI6mE/0.jpg)](https://youtu.be/YsAy3gaI6mE)
-- Click to view as a 'YouTube' video.  
+- Click to view as a 'YouTube' video. - MacOS
 
 </br>
-- iOS 
+</br>
+
+- Shorts  
 [![Shorts Label](http://img.youtube.com/vi/3apab7j8eHc/0.jpg)](https://youtube.com/shorts/3apab7j8eHc)
-- Click to view as a 'YouTube' video.  
-
-
+- Click to view as a 'YouTube' video.  - iOS 
 
 ## Tech stack
 - Multi-platform Support for macOS and iOS
