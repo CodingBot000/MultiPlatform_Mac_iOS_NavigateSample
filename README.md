@@ -19,7 +19,7 @@
 
 </br>
 - iOS 
-[![Video Label](http://img.youtube.com/vi/3apab7j8eHc/0.jpg)](https://youtu.be/3apab7j8eHc)
+[![Shorts Label](http://img.youtube.com/vi/3apab7j8eHc/0.jpg)](https://youtube.com/shorts/3apab7j8eHc)
 - Click to view as a 'YouTube' video.  
 
 
