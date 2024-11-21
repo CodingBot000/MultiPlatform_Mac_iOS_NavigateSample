@@ -15,14 +15,14 @@
 
 
 - MacOS  
-[![Video Label](http://img.youtube.com/vi/YsAy3gaI6mE/0.jpg)](https://youtu.be/YsAy3gaI6mE)
+[![Shorts Label](http://img.youtube.com/vi/2qP_ct6N44U/0.jpg)](https://youtube.com/shorts/2qP_ct6N44U)
 - Click to view as a 'YouTube' video. - MacOS
 
 </br>
 </br>
 
 - Shorts  
-[![Shorts Label](http://img.youtube.com/vi/3apab7j8eHc/0.jpg)](https://youtube.com/shorts/3apab7j8eHc)
+[![Shorts Label](http://img.youtube.com/vi/Jgbi6a4gltU/0.jpg)](https://youtube.com/shorts/Jgbi6a4gltU)
 - Click to view as a 'YouTube' video.  - iOS 
 
 ## Tech stack
