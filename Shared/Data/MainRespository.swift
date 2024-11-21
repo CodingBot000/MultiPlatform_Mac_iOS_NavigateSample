@@ -17,6 +17,8 @@ class MainRespository {
             return "View1 Menu"
         case NavigationItem.favorites:
             return "View2 Favorites"
+        case NavigationItem.viewgrid:
+            return "View Grid"
         }
     }
     
@@ -26,6 +28,8 @@ class MainRespository {
             return ViewIdentifier.view1_1
         case NavigationItem.favorites:
             return ViewIdentifier2.view2_1
+        case NavigationItem.viewgrid:
+            return ViewIdentifier_grid.view_grid
         }
     }
     

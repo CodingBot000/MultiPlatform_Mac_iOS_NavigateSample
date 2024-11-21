@@ -8,12 +8,24 @@
 import SwiftUI
 
 struct AppTabNavigation: View {
-    @State private var selection: NavigationItem = .menu
-    @State private var pathMenu = NavigationPath()
+   @State private var selection: NavigationItem = .viewgrid
+   @State private var pathMenu = NavigationPath()
    @State private var pathFavorites = NavigationPath()
-
+   @State private var pathGridView = NavigationPath()
+    
    var body: some View {
        TabView(selection: $selection) {
+           NavigationStack(path: $pathGridView) {
+               ViewGrid(path: $pathGridView, navigationItem: NavigationItem.viewgrid)
+                   .navigationDestination(for: ViewIdentifier_grid.self) { destination in
+               
+                   }
+           }
+           .tabItem {
+               Label("GridView", systemImage: "square.grid.3x3.middleleft.fill")
+           }
+           .tag(NavigationItem.viewgrid)
+           
            NavigationStack(path: $pathMenu) {
                View1(path: $pathMenu, navigationItem: NavigationItem.menu)
                    .navigationDestination(for: ViewIdentifier.self) { destination in
