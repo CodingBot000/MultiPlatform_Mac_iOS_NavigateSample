@@ -25,23 +25,16 @@ struct DisplayVerticalGrid: View {
                 LazyVGrid(columns: columns, spacing: 5) {
                     ForEach(0..<itemDatas.count, id: \.self) { index in
                         let data = itemDatas[index]
-//                        Button(action: {
-//                            onItemSelected(data) // 클릭 이벤트 발생 시 클로저 호출
-//                        }) {
-//                                                     NavigationLink(
-//                                                         destination: ViewDetail(data: data),
-//                                                         tag: data,
-//                                                         selection: $selectedItem
-//                                                     ) {
+
                         NavigationLink(value: data) {
                             DisplayHorizontalCell(
                                 name: data.name,
                                 color: data.color,
                                 width: cellWidth,
                                 height: cellHeight)
-                                                     }
-                        }
-//                    }
+                         }
+                    }
+
                 }
             }
 //            .background(Color.green)

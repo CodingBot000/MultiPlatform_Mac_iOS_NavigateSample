@@ -48,17 +48,7 @@ struct DisplaySectioniOSView: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 10)
                 
-//                if let selectedData = selectedData {
-//                    NavigationLink(
-//                       destination: ViewDetail(data: selectedData ?? displayDataList.first!),
-//                       tag: selectedData,
-//                       selection: $selectedData
-//                   ) {
-//                       EmptyView()
-//                   }
-//                   .hidden() // Hidden NavigationLink
-//                }
-//                
+
                 DisplayVerticalGrid(
                     itemDatas: displayDataList
           
