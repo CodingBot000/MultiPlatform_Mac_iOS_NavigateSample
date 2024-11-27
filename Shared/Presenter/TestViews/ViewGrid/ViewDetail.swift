@@ -10,7 +10,9 @@ import SwiftUI
 
 struct ViewDetail: View {
     let data: DisplayData
-
+    
+    @State private var scaleFactors: [CGFloat] = Array(repeating: 1.0, count: 80)
+    
     
     var body: some View {
 
@@ -25,8 +27,9 @@ struct ViewDetail: View {
                      spacing: 5
                  ) {
                      ForEach(0..<80, id: \.self) { index in
-                         TetrisBlock(color: randomColor(), widthMultiplier: randomMultiplier())
-                             .aspectRatio(1.0, contentMode: .fit)
+                         TetrisBlock(color: randomColor(), widthMultiplier: randomMultiplier() * scaleFactors[index])
+                                  .aspectRatio(1.0, contentMode: .fit)
+                                  .animation(.easeInOut(duration: randomAnimationDuration()), value: scaleFactors[index])
                      }
                  }
                  .padding()
@@ -38,13 +41,12 @@ struct ViewDetail: View {
         .background(data.color.ignoresSafeArea())
         .navigationTitle("ViewDetail")
         .onAppear() {
-
+            startRandomScaleAnimation()
         }
     }
     
 
     private func randomColor() -> Color {
-
         return colorList.randomElement() ?? .black
     }
 
@@ -52,6 +54,26 @@ struct ViewDetail: View {
     private func randomMultiplier() -> CGFloat {
         [1.0, 1.5, 2.0].randomElement() ?? 1.0
     }
+    
+    private func randomAnimationDuration() -> Double {
+            return Double.random(in: 0.5...2.0)
+        }
+        
+        private func startRandomScaleAnimation() {
+            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
+                var newScaleFactors = scaleFactors
+                let countToAnimate = Int(Double(scaleFactors.count) * (1.0 / 3.0))
+                let indicesToAnimate = (0..<scaleFactors.count).shuffled().prefix(countToAnimate)
+
+                for index in indicesToAnimate {
+                    newScaleFactors[index] = CGFloat.random(in: 0.5...2.0)
+                }
+
+                withAnimation {
+                    scaleFactors = newScaleFactors
+                }
+            }
+        }
 }
 
 
